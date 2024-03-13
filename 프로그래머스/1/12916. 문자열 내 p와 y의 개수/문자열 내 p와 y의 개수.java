@@ -1,19 +1,10 @@
 class Solution {
     boolean solution(String s) {
-        int pCount=0, yCount=0;
-        for(char a: s.toCharArray()){
-            switch(a){
-                case 'p':
-                case 'P':
-                    pCount++;
-                    break;
-                case 'y':
-                case 'Y':
-                    yCount++;
-                    break;
-            }
+        int count=0;
+        for(char a: s.toUpperCase().toCharArray()){
+            if(a == 'P') count++;
+            else if(a == 'Y') count--;
         }
-
-        return pCount==yCount?true:false;
+        return count==0;
     }
 }
