@@ -6,8 +6,7 @@ class Solution {
         for(int index = 0; index < s.length();){
             temp = s.charAt(index);
             if(temp == 'z'){
-                sb.append("0");
-                index+=4;
+                sb.append("0"); index+=4;
             }else if(temp == 'o'){
                 sb.append("1");
                 index+=3;
