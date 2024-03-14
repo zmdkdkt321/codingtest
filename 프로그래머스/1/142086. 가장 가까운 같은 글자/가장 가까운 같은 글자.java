@@ -2,14 +2,13 @@ import java.util.*;
 
 class Solution {
     public int[] solution(String s) {
-        char[] cArr = s.toCharArray();
-        int[] answer = new int[cArr.length];
+        int[] answer = new int[s.length()];
         Integer index;
         HashMap<Character,Integer> map = new HashMap<>();
-        for(int i = 0; i < cArr.length; i++){
-            index = map.get(cArr[i]);
-            map.put(cArr[i],i);
-            answer[i] = (index==null)?-1:i-index;
+        for(int i = 0; i < s.length(); i++){
+            index = map.get(s.charAt(i));
+            answer[i] = (map.get(s.charAt(i))==null)?-1:i-index;
+            map.put(s.charAt(i),i);
         }
         return answer;
     }
