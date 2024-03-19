@@ -14,10 +14,7 @@ class Solution {
         result[0] = count1;
         result[1] = count2;
         result[2] = count3;
-        
-        System.out.print(Arrays.toString(result));
-        System.out.print(count1);
-        
+            
         int max = 0;
         int maxCount = 0;
         for(int i:result){
