@@ -21,7 +21,7 @@ class Solution {
         boolean flag;
         for(int setNum:list){
             flag = true;
-            for(int i = 2; i <= setNum/2; i++){
+            for(int i = 2; i <= Math.sqrt(setNum); i++){
                 if(setNum%i == 0){
                     flag = false;
                     break;
